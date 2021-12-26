@@ -219,6 +219,7 @@ def detect(opt):
     LOGGER.info(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS, %.1fms deep sort update \
         per image at shape {(1, 3, *imgsz)}' % t)
     if save_txt or save_vid:
+        print(save_path)
         print('Results saved to %s' % os.getcwd() + os.sep + out)
         if platform == 'darwin':  # MacOS
             os.system('open ' + save_path)
